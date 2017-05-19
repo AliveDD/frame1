@@ -1,6 +1,8 @@
 <script>
-  window.addEventListener('visible1', receiveMessage, false);
+  window.addEventListener('message', receiveMessage, false);
   function receiveMessage(event) {
-    console.log('frame 1 is received!');
+    if (event.origin === 'http://localhost:5757') {
+      console.log('frame 1 is received!');
+    }
   }
 </script>
